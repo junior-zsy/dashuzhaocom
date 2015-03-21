@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ECSHOP 管理中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Styles/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background: #ED6D00;color:white">
+<!--body style="background-image:url(__PUBLIC__/Images/login.jpg);color:white"-->
+<form method="post" action="__SELF__">
+    <table cellspacing="0" cellpadding="0" style="margin-top:100px" align="center">
+        <tr>
+            <td>
+                <img src="__PUBLIC__/Images/login.jpg" width="83" height="83" border="0" alt="ECSHOP" />
+            </td>
+            <td style="padding-left: 50px">
+                <table>
+                    <tr>
+                        <td>管理员姓名：</td>
+                        <td>
+                            <input type="text" name="admin_name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>管理员密码：</td>
+                        <td>
+                            <input type="password" name="admin_pass" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>验证码：</td>
+                        <td>
+                        	<img style="cursor:pointer;" onclick="this.src='__CONTROLLER__/check_code_img/'+Math.random();" src="__CONTROLLER__/check_code_img" /><br />
+                            <input type="text" name="chk_code" class="capital" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <input type="submit" value="进入管理中心" class="button" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+  <input type="hidden" name="act" value="signin" />
+</form>
+</body>
